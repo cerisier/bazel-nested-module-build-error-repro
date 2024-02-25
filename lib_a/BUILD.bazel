@@ -1,0 +1,10 @@
+load("@rules_jvm_external//:defs.bzl", "artifact")
+
+java_binary(
+    name = "lib_a",
+    srcs = ["java/src/com/test/Main.java"],
+    deps = [
+        artifact("com.google.guava:guava"),
+    ],
+    main_class = "com.test.Main"
+)
