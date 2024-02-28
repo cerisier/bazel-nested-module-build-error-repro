@@ -1,3 +1,8 @@
 module(name = "bazel-nested-module-build-error-repro", version = "0.0.1")
 
 bazel_dep(name = "rules_jvm_external", version = "6.0")
+
+bazel_dep(name = "lib_a", version = "")
+local_path_override(
+    module_name = "lib_a", path = "./lib_a",
+)
